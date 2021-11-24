@@ -1,0 +1,226 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.20f1 (41c4e627c95f) revision 4310246'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19042.1348; Version 2009; 64bit' Language: 'en' Physical Memory: 32685 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.20f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/Ashley/Desktop/NYU/RaycastGame
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+60479
+Successfully changed project path to: C:/Users/Ashley/Desktop/NYU/RaycastGame
+C:/Users/Ashley/Desktop/NYU/RaycastGame
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 28.64 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.20f1 (41c4e627c95f)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Ashley/Desktop/NYU/RaycastGame/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1660 SUPER (ID=0x21c4)
+    Vendor:   
+    VRAM:     5991 MB
+    Driver:   27.21.14.5751
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56916
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001619 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 27.52 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.505 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1505ms)
+		BeginReloadAssembly (48ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (365ms)
+			LoadAssemblies (46ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (133ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (26ms)
+			SetupLoadedEditorAssemblies (144ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (28ms)
+				BeforeProcessingInitializeOnLoad (14ms)
+				ProcessInitializeOnLoadAttributes (73ms)
+				ProcessInitializeOnLoadMethodAttributes (26ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002360 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.27 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.861 seconds
+Domain Reload Profiling:
+	ReloadAssembly (862ms)
+		BeginReloadAssembly (124ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (15ms)
+		EndReloadAssembly (683ms)
+			LoadAssemblies (73ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (234ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (258ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (67ms)
+				ProcessInitializeOnLoadAttributes (177ms)
+				ProcessInitializeOnLoadMethodAttributes (4ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.28 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1400 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 66.1 MB.
+System memory in use after: 66.2 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 1836.
+Total: 2.227300 ms (FindLiveObjects: 0.120100 ms CreateObjectMapping: 0.038800 ms MarkObjects: 2.017700 ms  DeleteObjects: 0.050000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/TextureHaven/rock_4k/rock_4k_materials/rock_04.mat
+  artifactKey: Guid(73190b1e481562b44ba5e47e7bca7651) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextureHaven/rock_4k/rock_4k_materials/rock_04.mat using Guid(73190b1e481562b44ba5e47e7bca7651) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b41b7a17dd92941efac19415c2a4720e') in 0.404384 seconds 
+  Import took 0.411045 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000175 seconds.
+  path: Assets/TextureHaven/rock_4k/rock_4k_textures/castle_wall_slates/castle_wall_slates_rough_4k.png
+  artifactKey: Guid(717ac1e6cb050cb4bbe0ed891d5f3600) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextureHaven/rock_4k/rock_4k_textures/castle_wall_slates/castle_wall_slates_rough_4k.png using Guid(717ac1e6cb050cb4bbe0ed891d5f3600) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1532fc926a92c2f94895a5b84352f4f') in 0.027108 seconds 
+  Import took 0.029996 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000140 seconds.
+  path: Assets/TextureHaven/rock_4k/rock_4k_materials/rock_2.mat
+  artifactKey: Guid(bb737ddf77f83fd4dad54c6b6150cdc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextureHaven/rock_4k/rock_4k_materials/rock_2.mat using Guid(bb737ddf77f83fd4dad54c6b6150cdc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae58cc3117235a4cb2be135512b47563') in 0.056538 seconds 
+  Import took 0.062226 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/TextureHaven/rock_4k/rock_4k_materials/rock_01.mat
+  artifactKey: Guid(a62cc74b12333f04cb06d13bf35a05be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextureHaven/rock_4k/rock_4k_materials/rock_01.mat using Guid(a62cc74b12333f04cb06d13bf35a05be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '386761af3e01d4f051f17bc7c8fc26a5') in 0.072927 seconds 
+  Import took 0.079328 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000130 seconds.
+  path: Assets/TextureHaven/rock_4k/rock_4k_materials/rock_3.mat
+  artifactKey: Guid(26271f6d98370ee4a90b245d788a3fe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextureHaven/rock_4k/rock_4k_materials/rock_3.mat using Guid(26271f6d98370ee4a90b245d788a3fe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '127e7e303644f5e34bc6d97ff2fc231f') in 0.052091 seconds 
+  Import took 0.057652 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000153 seconds.
+  path: Assets/TextureHaven/rock_4k/rock_4k_materials/rock_05.mat
+  artifactKey: Guid(b1d791bf3c73eb44596c07cf990994a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextureHaven/rock_4k/rock_4k_materials/rock_05.mat using Guid(b1d791bf3c73eb44596c07cf990994a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5db8014379e5a4be5ec11f2bec2d0346') in 0.051540 seconds 
+  Import took 0.056825 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/TextureHaven/rock_4k/rock_4k_textures/castle_wall_slates/castle_wall_slates_nor_4k.png
+  artifactKey: Guid(1bf32d027b1f5e74b966f42228761f51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextureHaven/rock_4k/rock_4k_textures/castle_wall_slates/castle_wall_slates_nor_4k.png using Guid(1bf32d027b1f5e74b966f42228761f51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '225d39f1cbbac767821c7495346a6b58') in 0.032016 seconds 
+  Import took 0.035020 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/TextureHaven/rock_4k/rock_4k_materials/rock_06.mat
+  artifactKey: Guid(8b247c18643ee1c4ba976296f4061e41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextureHaven/rock_4k/rock_4k_materials/rock_06.mat using Guid(8b247c18643ee1c4ba976296f4061e41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab06c598c976be27d8a8568a0ca95671') in 0.053072 seconds 
+  Import took 0.058576 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/TextureHaven/rock_4k/rock_4k_textures/castle_wall_slates/castle_wall_slates_disp_4k.png
+  artifactKey: Guid(773d7faa735d6da4d96961969345e76f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextureHaven/rock_4k/rock_4k_textures/castle_wall_slates/castle_wall_slates_disp_4k.png using Guid(773d7faa735d6da4d96961969345e76f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0c899903576789820ed732b74d1f7db') in 0.022139 seconds 
+  Import took 0.025552 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/TextureHaven/rock_4k/rock_4k_textures/castle_wall_slates/castle_wall_slates_rough_ao_4k.png
+  artifactKey: Guid(5dcce98f846d5854bba933b975906196) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextureHaven/rock_4k/rock_4k_textures/castle_wall_slates/castle_wall_slates_rough_ao_4k.png using Guid(5dcce98f846d5854bba933b975906196) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5af76039d3f29cc91815346748692d6c') in 0.015444 seconds 
+  Import took 0.018175 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/TextureHaven/rock_4k/rock_4k_textures/castle_wall_slates/castle_wall_slates_diff_4k.png
+  artifactKey: Guid(ce2eeefbca069114ca4687dcc387a8e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextureHaven/rock_4k/rock_4k_textures/castle_wall_slates/castle_wall_slates_diff_4k.png using Guid(ce2eeefbca069114ca4687dcc387a8e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ece4fb95738d0cd1185c1dffd00404b8') in 0.015137 seconds 
+  Import took 0.017533 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000155 seconds.
+  path: Assets/TextureHaven/rock_4k/rock_4k_materials/rock_08.mat
+  artifactKey: Guid(4e77562e49595584e941ba0bf98871c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextureHaven/rock_4k/rock_4k_materials/rock_08.mat using Guid(4e77562e49595584e941ba0bf98871c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fee92e952559c4e23cdd12e57c57a637') in 0.053850 seconds 
+  Import took 0.059836 seconds .
+
