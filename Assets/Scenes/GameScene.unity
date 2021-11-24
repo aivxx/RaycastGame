@@ -123,6 +123,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &404993768 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3368916564331560363, guid: b3c0a61dfe701344d819eb701e83f4b7, type: 3}
+  m_PrefabInstance: {fileID: 2450417887612273685}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &404993772
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404993768}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.66791123
+  m_Center: {x: -0.0000004939708, y: 0.16426176, z: 0.0000009683603}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,6 +245,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -299,6 +318,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -166.319, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81fd854142bab3c4890c2eb826d4a6b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToPlace: {fileID: 1609972295}
 --- !u!1 &1399859894
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,7 +450,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1609972294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.7981, y: 12.937, z: -48.96}
+  m_LocalPosition: {x: -8.7981, y: 13.68, z: -48.96}
   m_LocalScale: {x: 2.4528, y: 2.4528, z: 2.4528}
   m_Children:
   - {fileID: 2450417887612273686}
@@ -479,6 +511,10 @@ PrefabInstance:
     - target: {fileID: 3368916564331560363, guid: b3c0a61dfe701344d819eb701e83f4b7, type: 3}
       propertyPath: m_Name
       value: SpaceShip
+      objectReference: {fileID: 0}
+    - target: {fileID: 9144030251778499809, guid: b3c0a61dfe701344d819eb701e83f4b7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3c0a61dfe701344d819eb701e83f4b7, type: 3}
