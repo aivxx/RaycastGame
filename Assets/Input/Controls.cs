@@ -20,9 +20,17 @@ public class @Controls : IInputActionCollection, IDisposable
             ""actions"": [
                 {
                     ""name"": ""Fire"",
-                    ""type"": ""Button"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""2a7d1d99-f101-43ba-81a4-2f41cd4adf2b"",
                     ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""MousePosition"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""1dcab6fe-06a1-4874-9d1f-291c8b48cc8a"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -36,6 +44,17 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""New control scheme"",
                     ""action"": ""Fire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ef2dc14d-9b4c-48d0-9d1c-ed94a6ae37f2"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""New control scheme"",
+                    ""action"": ""MousePosition"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -64,6 +83,7 @@ public class @Controls : IInputActionCollection, IDisposable
         // Controller
         m_Controller = asset.FindActionMap("Controller", throwIfNotFound: true);
         m_Controller_Fire = m_Controller.FindAction("Fire", throwIfNotFound: true);
+        m_Controller_MousePosition = m_Controller.FindAction("MousePosition", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -114,11 +134,13 @@ public class @Controls : IInputActionCollection, IDisposable
     private readonly InputActionMap m_Controller;
     private IControllerActions m_ControllerActionsCallbackInterface;
     private readonly InputAction m_Controller_Fire;
+    private readonly InputAction m_Controller_MousePosition;
     public struct ControllerActions
     {
         private @Controls m_Wrapper;
         public ControllerActions(@Controls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Fire => m_Wrapper.m_Controller_Fire;
+        public InputAction @MousePosition => m_Wrapper.m_Controller_MousePosition;
         public InputActionMap Get() { return m_Wrapper.m_Controller; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -131,6 +153,9 @@ public class @Controls : IInputActionCollection, IDisposable
                 @Fire.started -= m_Wrapper.m_ControllerActionsCallbackInterface.OnFire;
                 @Fire.performed -= m_Wrapper.m_ControllerActionsCallbackInterface.OnFire;
                 @Fire.canceled -= m_Wrapper.m_ControllerActionsCallbackInterface.OnFire;
+                @MousePosition.started -= m_Wrapper.m_ControllerActionsCallbackInterface.OnMousePosition;
+                @MousePosition.performed -= m_Wrapper.m_ControllerActionsCallbackInterface.OnMousePosition;
+                @MousePosition.canceled -= m_Wrapper.m_ControllerActionsCallbackInterface.OnMousePosition;
             }
             m_Wrapper.m_ControllerActionsCallbackInterface = instance;
             if (instance != null)
@@ -138,6 +163,9 @@ public class @Controls : IInputActionCollection, IDisposable
                 @Fire.started += instance.OnFire;
                 @Fire.performed += instance.OnFire;
                 @Fire.canceled += instance.OnFire;
+                @MousePosition.started += instance.OnMousePosition;
+                @MousePosition.performed += instance.OnMousePosition;
+                @MousePosition.canceled += instance.OnMousePosition;
             }
         }
     }
@@ -154,5 +182,6 @@ public class @Controls : IInputActionCollection, IDisposable
     public interface IControllerActions
     {
         void OnFire(InputAction.CallbackContext context);
+        void OnMousePosition(InputAction.CallbackContext context);
     }
 }

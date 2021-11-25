@@ -6,18 +6,18 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     [SerializeField]
-    public Controls controls;
+    private GameObject bullet;
+    [SerializeField]
+    private Transform bulletDirection;
+    private Controls controls;
+    private bool canShoot = true;
 
     private void Awake()
     {
-        controls.Controller.Fire.performed += ctx => Shoot();
+        controls = new Controls();
     }
 
-    void Shoot()
-    {
-        Debug.Log("hit");
-    }
-
+ 
     private void OnEnable()
     {
         controls.Enable();
@@ -26,5 +26,28 @@ public class Player : MonoBehaviour
     private void OnDisable()
     {
         controls.Disable();
+    }
+
+    private void Start()
+    {
+        controls.Controller.Fire.performed += _ => PlayerShoot();
+    }
+
+    private void PlayerShoot()
+    {
+        if (!canShoot) return;
+
+        Vector2 mousePosition = controls.Controller.MousePosition.ReadValue<Vector2>();
+        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        GameObject g = Instantiate(bullet, bulletDirection.position, bulletDirection.rotation);
+        g.SetActive(true);
+        StartCoroutine(CanShoot());
+    }
+
+    IEnumerator CanShoot()
+    {
+        canShoot = false;
+        yield return new WaitForSeconds(.5f);
+        canShoot = true;
     }
 }

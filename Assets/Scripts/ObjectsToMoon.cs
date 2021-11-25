@@ -20,7 +20,7 @@ public class ObjectsToMoon : MonoBehaviour
         RaycastHit hit;
 
         // ray from the object to moon
-        Ray ray = new Ray(transform.position, transform.forward);
+        Ray ray = new Ray(transform.position, transform.up);
 
 
 
@@ -32,6 +32,8 @@ public class ObjectsToMoon : MonoBehaviour
             // rotate the object to be right side up
             objects.rotation = Quaternion.FromToRotation(Vector3.up, hit.normal);
         }
+
+    
     }
 
 }
