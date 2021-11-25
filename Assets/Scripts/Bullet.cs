@@ -7,6 +7,13 @@ public class Bullet : MonoBehaviour
     [SerializeField]
     private float speed = 4f;
 
+    private BulletController pool;
+
+    private void Start()
+    {
+        pool = transform.parent.GetComponent<BulletController>();
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -16,7 +23,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
+        pool.ReturnObject(gameObject);
     }  
     private void OnEnable()
     {
@@ -25,7 +32,7 @@ public class Bullet : MonoBehaviour
     IEnumerator DestroyBulletAfterTime()
     {
         yield return new WaitForSeconds(3f);
-        Destroy(gameObject);
+        pool.ReturnObject(gameObject);
     }
 
   

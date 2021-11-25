@@ -4,14 +4,8 @@ using UnityEngine;
 
 public class ShootableRocks : MonoBehaviour
 {
-    public int currentHealth = 2;
-
-    public void Damage(int damageAmount)
+    private void OnTriggerEnter(Collider other)
     {
-        currentHealth -= damageAmount;
-        if (currentHealth <=0)
-        {
-            gameObject.SetActive(false);
-        }
+        Destroy(gameObject);
     }
 }

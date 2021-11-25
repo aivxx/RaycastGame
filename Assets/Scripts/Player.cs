@@ -9,8 +9,12 @@ public class Player : MonoBehaviour
     private GameObject bullet;
     [SerializeField]
     private Transform bulletDirection;
+    [SerializeField]
+    private BulletController bulletPool;
+
     private Controls controls;
     private bool canShoot = true;
+    
 
     private void Awake()
     {
@@ -39,7 +43,9 @@ public class Player : MonoBehaviour
 
         Vector2 mousePosition = controls.Controller.MousePosition.ReadValue<Vector2>();
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-        GameObject g = Instantiate(bullet, bulletDirection.position, bulletDirection.rotation);
+        GameObject g = bulletPool.GetObject();
+        g.transform.position = bulletDirection.position;
+        g.transform.rotation = bulletDirection.rotation;
         g.SetActive(true);
         StartCoroutine(CanShoot());
     }
@@ -49,5 +55,10 @@ public class Player : MonoBehaviour
         canShoot = false;
         yield return new WaitForSeconds(.5f);
         canShoot = true;
+    }
+
+    private void Update()
+    {
+        
     }
 }
