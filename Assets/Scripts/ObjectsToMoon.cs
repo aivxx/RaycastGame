@@ -31,9 +31,8 @@ public class ObjectsToMoon : MonoBehaviour
             objects.position = hit.point;
             // rotate the object to be right side up
             objects.rotation = Quaternion.FromToRotation(Vector3.up, hit.normal);
+
         }
 
-    
     }
-
 }
