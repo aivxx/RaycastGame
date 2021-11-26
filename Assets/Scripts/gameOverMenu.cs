@@ -8,7 +8,7 @@ public class gameOverMenu : MonoBehaviour
 {
     
 
-    public static bool GamePaused = false;
+    
 
     public void SceneLoad(string sceneName)
     {

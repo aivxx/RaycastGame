@@ -17,6 +17,12 @@ public class PlayerToMoon : MonoBehaviour
     // This function is called every fixed framerate frame, if the MonoBehaviour is enabled
     private void FixedUpdate()
     {
+
+        //create bitmask
+        //int mask = 1 << LayerMask.NameToLayer("Player");
+        //inverse bitmask
+        //mask = ~mask;
+
         // hit variable to store our results in
         RaycastHit hit;
 

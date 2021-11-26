@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class ShootableRocks : MonoBehaviour
 {
-
- 
-
-    public GameObject ship;
+    
+    public AudioSource rocksDestroyedAudio;
 
     private void OnTriggerEnter(Collider other)
     {
+        rocksDestroyedAudio.Play();
         Destroy(gameObject);
-
+        
     }
 }

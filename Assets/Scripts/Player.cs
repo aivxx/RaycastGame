@@ -11,6 +11,12 @@ public class Player : MonoBehaviour
     private Transform bulletDirection;
     [SerializeField]
     private BulletController bulletPool;
+    [SerializeField]
+    private GameObject spawnPoint;
+    [SerializeField]
+    public AudioSource[] sounds;
+    public AudioSource destroyAudio;
+    public AudioSource bulletAudio;
 
     private Controls controls;
     private bool canShoot = true;
@@ -19,6 +25,9 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         controls = new Controls();
+        transform.position = spawnPoint.transform.position;
+        sounds = GetComponents<AudioSource>();
+        bulletAudio = sounds[1];
     }
 
  
@@ -47,6 +56,7 @@ public class Player : MonoBehaviour
         g.transform.position = bulletDirection.position;
         g.transform.rotation = bulletDirection.rotation;
         g.SetActive(true);
+        bulletAudio.Play();
         StartCoroutine(CanShoot());
     }
 

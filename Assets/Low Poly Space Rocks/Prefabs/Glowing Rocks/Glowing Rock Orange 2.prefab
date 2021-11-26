@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cd794a278084c341b4ba2050f395d5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rocksDestroyedAudio: {fileID: 0}
 --- !u!135 &4210447561147453384
 SphereCollider:
   m_ObjectHideFlags: 0

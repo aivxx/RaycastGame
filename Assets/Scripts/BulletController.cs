@@ -10,6 +10,7 @@ public class BulletController : MonoBehaviour
     private int poolSize;
     [SerializeField]
     private bool expandable;
+   
 
     private List<GameObject> freeList;
     private List<GameObject> usedList;
@@ -51,5 +52,6 @@ public class BulletController : MonoBehaviour
         g.transform.parent = transform;
         g.SetActive(false);
         freeList.Add(g);
+        
     }
 }
