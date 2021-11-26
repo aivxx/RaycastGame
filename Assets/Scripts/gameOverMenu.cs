@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class gameOverMenu : MonoBehaviour
 {
-   
+    
 
     public void SceneLoad(string sceneName)
     {
