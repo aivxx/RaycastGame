@@ -59,6 +59,33 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Pause"",
+            ""id"": ""81164daa-8c77-4e66-a772-95f1bf7e638c"",
+            ""actions"": [
+                {
+                    ""name"": ""Paused"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""460fcbb6-0dfd-4088-902f-446cdd3b8e45"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""4fa05e0d-5312-4d00-9b7a-bbfaf297b533"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""New control scheme"",
+                    ""action"": ""Paused"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -84,6 +111,9 @@ public class @Controls : IInputActionCollection, IDisposable
         m_Controller = asset.FindActionMap("Controller", throwIfNotFound: true);
         m_Controller_Fire = m_Controller.FindAction("Fire", throwIfNotFound: true);
         m_Controller_MousePosition = m_Controller.FindAction("MousePosition", throwIfNotFound: true);
+        // Pause
+        m_Pause = asset.FindActionMap("Pause", throwIfNotFound: true);
+        m_Pause_Paused = m_Pause.FindAction("Paused", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -170,6 +200,39 @@ public class @Controls : IInputActionCollection, IDisposable
         }
     }
     public ControllerActions @Controller => new ControllerActions(this);
+
+    // Pause
+    private readonly InputActionMap m_Pause;
+    private IPauseActions m_PauseActionsCallbackInterface;
+    private readonly InputAction m_Pause_Paused;
+    public struct PauseActions
+    {
+        private @Controls m_Wrapper;
+        public PauseActions(@Controls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Paused => m_Wrapper.m_Pause_Paused;
+        public InputActionMap Get() { return m_Wrapper.m_Pause; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(PauseActions set) { return set.Get(); }
+        public void SetCallbacks(IPauseActions instance)
+        {
+            if (m_Wrapper.m_PauseActionsCallbackInterface != null)
+            {
+                @Paused.started -= m_Wrapper.m_PauseActionsCallbackInterface.OnPaused;
+                @Paused.performed -= m_Wrapper.m_PauseActionsCallbackInterface.OnPaused;
+                @Paused.canceled -= m_Wrapper.m_PauseActionsCallbackInterface.OnPaused;
+            }
+            m_Wrapper.m_PauseActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Paused.started += instance.OnPaused;
+                @Paused.performed += instance.OnPaused;
+                @Paused.canceled += instance.OnPaused;
+            }
+        }
+    }
+    public PauseActions @Pause => new PauseActions(this);
     private int m_NewcontrolschemeSchemeIndex = -1;
     public InputControlScheme NewcontrolschemeScheme
     {
@@ -183,5 +246,9 @@ public class @Controls : IInputActionCollection, IDisposable
     {
         void OnFire(InputAction.CallbackContext context);
         void OnMousePosition(InputAction.CallbackContext context);
+    }
+    public interface IPauseActions
+    {
+        void OnPaused(InputAction.CallbackContext context);
     }
 }

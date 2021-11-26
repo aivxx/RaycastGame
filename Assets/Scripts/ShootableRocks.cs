@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class ShootableRocks : MonoBehaviour
 {
+
+ 
+
+    public GameObject ship;
+
     private void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
+
     }
 }

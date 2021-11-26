@@ -46,6 +46,33 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Pause",
+            "id": "81164daa-8c77-4e66-a772-95f1bf7e638c",
+            "actions": [
+                {
+                    "name": "Paused",
+                    "type": "PassThrough",
+                    "id": "460fcbb6-0dfd-4088-902f-446cdd3b8e45",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4fa05e0d-5312-4d00-9b7a-bbfaf297b533",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "New control scheme",
+                    "action": "Paused",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

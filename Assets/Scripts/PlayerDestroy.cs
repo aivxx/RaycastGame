@@ -17,7 +17,6 @@ public class PlayerDestroy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
         audioSource.Play();
         gameOverMenu.enabled = true;
     }
