@@ -27,8 +27,10 @@ public class ScoreManager : MonoBehaviour
             scoreCount.text = displayScore.ToString();
         }
 
-        if (score >=16)
+        if (score >=15)
         {
+            Time.timeScale = 0f;
+            Cursor.visible = true;
             gameWin.enabled = true;
         }
     }

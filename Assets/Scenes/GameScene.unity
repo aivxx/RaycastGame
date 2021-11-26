@@ -1952,7 +1952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationAxis: {x: 0, y: 1, z: 0}
-  rotationSpeed: 0.02
+  rotationSpeed: 0.1
 --- !u!82 &1399859900
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3673,7 +3673,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 403546, guid: d10eb66e7d7124e4cacc261276b1621d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 63.752224
+      value: 62.99
       objectReference: {fileID: 0}
     - target: {fileID: 403546, guid: d10eb66e7d7124e4cacc261276b1621d, type: 3}
       propertyPath: m_LocalRotation.w
