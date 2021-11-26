@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
     {
         controls = new Controls();
         gameWin.enabled = false;
+        Cursor.visible = false;
         transform.position = spawnPoint.transform.position;
         sounds = GetComponents<AudioSource>();
         bulletAudio = sounds[1];
@@ -70,8 +71,5 @@ public class Player : MonoBehaviour
         canShoot = true;
     }
 
-    private void Update()
-    {
-        
-    }
+   
 }

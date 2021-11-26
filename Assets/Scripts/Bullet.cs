@@ -29,7 +29,10 @@ public class Bullet : MonoBehaviour
 
      private void OnTriggerEnter(Collider other)
     {
-        ScoreManager.score++;
+        if (other.CompareTag("Rock"))
+        {
+            ScoreManager.score++;
+        }
         pool.ReturnObject(gameObject);
     }  
     private void OnEnable()

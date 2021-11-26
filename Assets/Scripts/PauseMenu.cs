@@ -13,16 +13,19 @@ public class PauseMenu : MonoBehaviour
     private void Awake()
     {
         action = new Controls();
+        Cursor.visible = false;
     }
 
     private void OnEnable()
     {
         action.Enable();
+        
     }
 
     private void OnDisable()
     {
         action.Disable();
+        
     }
 
     private void Start()

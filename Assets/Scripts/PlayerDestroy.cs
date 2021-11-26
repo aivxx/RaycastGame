@@ -20,10 +20,13 @@ public class PlayerDestroy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        audioSource.Play();
-        gameOverMenu.enabled = true;
-        Time.timeScale = 0;
-        Cursor.visible = true;
+        if (other.CompareTag("Rock"))
+        {
+            audioSource.Play();
+            gameOverMenu.enabled = true;
+            Time.timeScale = 0;
+            Cursor.visible = true;
+        }
     }
 }
 
