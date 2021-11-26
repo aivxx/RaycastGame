@@ -66,7 +66,7 @@ public class @Controls : IInputActionCollection, IDisposable
             ""actions"": [
                 {
                     ""name"": ""Paused"",
-                    ""type"": ""PassThrough"",
+                    ""type"": ""Button"",
                     ""id"": ""460fcbb6-0dfd-4088-902f-446cdd3b8e45"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
