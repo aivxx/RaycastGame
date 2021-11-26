@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour
     public AudioSource[] sounds;
     public AudioSource destroyAudio;
     public AudioSource bulletAudio;
+    public Canvas gameWin;
 
     private Controls controls;
     private bool canShoot = true;
@@ -25,6 +27,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         controls = new Controls();
+        gameWin.enabled = false;
         transform.position = spawnPoint.transform.position;
         sounds = GetComponents<AudioSource>();
         bulletAudio = sounds[1];

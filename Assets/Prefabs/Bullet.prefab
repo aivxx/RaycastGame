@@ -110,6 +110,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  gameWin: {fileID: 634196913675838859, guid: 1522b6b7bc6d2f846b6cc1e12aa8b9ed, type: 3}
+  countText: {fileID: 4801495996787979190, guid: 531a909fb5a440f45b6e44f177111609, type: 3}
 --- !u!54 &8237589915713010112
 Rigidbody:
   m_ObjectHideFlags: 0
